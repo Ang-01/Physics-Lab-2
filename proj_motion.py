@@ -26,8 +26,8 @@ for file in files:
     
     hist_names = ["Metal Ball Trial 1", "Metal Ball Trial 2", "Plastic Ball Trial 1", "Plastic Ball Trial 2"]
     plt.hist(x)  # density=False would make counts
-    plt.ylabel("Z Data")
-    plt.xlabel("X Data")
+    plt.ylabel("Z Data (cm)")
+    plt.xlabel("X Data (cm)")
     split = file.split(".", 1)
     plt.title(hist_names[count])
     count += 1

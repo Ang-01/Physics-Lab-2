@@ -24,12 +24,12 @@ for file in files:
     print("Mean Z:" + str(zmean))
     print("Mean Error:" + str(zsem))
     
-file_data = pd.read_csv("mb1.csv")
-x = file_data["x"]
-z = file_data["z"]
-plt.hist(x)  # density=False would make counts
-plt.ylabel("Z Data")
-plt.xlabel("X Data")
-plt.show()
+
+    plt.hist(x)  # density=False would make counts
+    plt.ylabel("Z Data")
+    plt.xlabel("X Data")
+    split = file.split(".", 1)
+    plt.savefig(split[0] +".jpg")
+    plt.show()
 
 

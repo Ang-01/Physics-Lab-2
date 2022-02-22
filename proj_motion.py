@@ -25,13 +25,27 @@ for file in files:
     print("Mean Error:" + str(zsem))
     
     hist_names = ["Metal Ball Trial 1", "Metal Ball Trial 2", "Plastic Ball Trial 1", "Plastic Ball Trial 2"]
-    plt.hist(x)  # density=False would make counts
-    plt.ylabel("Z Data (cm)")
+    w = 1
+    plt.hist(x, bins = 12)
+    #bins=np.arange(min(x), max(x) + w, w))  # density=False would make counts
+    plt.ylabel("Frequency")
     plt.xlabel("X Data (cm)")
     split = file.split(".", 1)
-    plt.title(hist_names[count])
-    count += 1
-    plt.savefig(split[0] +".jpg")
+    plt.title(hist_names[count] + ": Spread in X Position")
+    plt.savefig(split[0] +"_x.jpg")
     plt.show()
+    
+    plt.hist(z, bins = 12)
+    #bins=np.arange(min(x), max(x) + w, w))  # density=False would make counts
+    plt.ylabel("Frequency")
+    plt.xlabel("Z Data (cm)")
+    split = file.split(".", 1)
+    plt.title(hist_names[count] + ": Spread in Z Position")
+    plt.savefig(split[0] +"_z.jpg")
+    plt.show()
+    count += 1
+    
+    
+    
 
 

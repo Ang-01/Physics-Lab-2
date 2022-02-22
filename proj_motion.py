@@ -27,11 +27,9 @@ for file in files:
 file_data = pd.read_csv("mb1.csv")
 x = file_data["x"]
 z = file_data["z"]
-plt.hist(x, bins = 5)  # density=False would make counts
-plt.ylabel(z)
-plt.xlabel(x)
+plt.hist(x)  # density=False would make counts
+plt.ylabel("Z Data")
+plt.xlabel("X Data")
 plt.show()
-
-print("hello world")
 
 

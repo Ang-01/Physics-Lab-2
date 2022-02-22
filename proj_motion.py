@@ -5,7 +5,7 @@ import pandas as pd
 
 
 files = ["mb1.csv","mb2.csv","pb1.csv","pb2.csv"]
-
+count = 0
 
 for file in files:
     file_data = pd.read_csv(file)
@@ -24,11 +24,13 @@ for file in files:
     print("Mean Z:" + str(zmean))
     print("Mean Error:" + str(zsem))
     
-
+    hist_names = ["Metal Ball Trial 1", "Metal Ball Trial 2", "Plastic Ball Trial 1", "Plastic Ball Trial 2"]
     plt.hist(x)  # density=False would make counts
     plt.ylabel("Z Data")
     plt.xlabel("X Data")
     split = file.split(".", 1)
+    plt.title(hist_names[count])
+    count += 1
     plt.savefig(split[0] +".jpg")
     plt.show()
 

@@ -48,6 +48,8 @@ print("pb1: " + str(pb1))
 pb2 = predict(1.216,1.167,	1.35,1.046,	.996,	.292,	.294)
 print("pb2: " + str(pb2))
 
+#292
+
 #Metal Ball Trial 1
 mb1 = predict(1.205,	1.18,	1.26,	1.144,	1.068,	.298,	.294)
 print("mb1: " + str(mb1))

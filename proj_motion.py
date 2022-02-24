@@ -29,19 +29,19 @@ for file in files:
     plt.hist(x, bins = 12)
     #bins=np.arange(min(x), max(x) + w, w))  # density=False would make counts
     plt.ylabel("Frequency")
-    plt.xlabel("Difference Between Measured and Expected X Position ($\mathregular{10^{-2}}$m)")
+    plt.xlabel("Difference Between Measured and Expected x Position ($\mathregular{10^{-2}}$m)")
     split = file.split(".", 1)
-    plt.title(hist_names[count] + ": Offset Between Measured and Expected X Position")
+    plt.title(hist_names[count] + ": Offset Between Measured and Expected x Position")
     plt.savefig(split[0] +"_x.jpg")
     plt.show()
     
     plt.hist(z, bins = 12)
     #bins=np.arange(min(x), max(x) + w, w))  # density=False would make counts
     plt.ylabel("Frequency")
-    plt.xlabel("Difference Between Measured and Expected Z Position ($\mathregular{10^{-2}}$m)")
+    plt.xlabel("Difference Between Measured and Expected z Position ($\mathregular{10^{-2}}$m)")
     split = file.split(".", 1)
-    plt.title(hist_names[count] + ": Offset Between Measured and Expected Z Position")
-    plt.savefig(split[0] +"_z.jpg")
+    plt.title(hist_names[count] + ": Offset Between Measured and Expected z Position")
+    #plt.savefig(split[0] +"_z.jpg")
     plt.show()
     count += 1
     
